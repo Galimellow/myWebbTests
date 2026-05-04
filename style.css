@@ -32,3 +32,15 @@ h1{
     margin: 10px 0;
     font-size: 2rem;
 }
+
+#movingBox{
+    height: 100px;
+    width: 100px;
+    font-size: 4rem;
+    display: flex;
+    background-color: hsl(120, 85%, 34%);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+}
