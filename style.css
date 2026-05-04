@@ -154,6 +154,7 @@ Stylesheet for Page 3
     background-color: white;
     text-align: center;
     margin: auto;
+    max-width: 350px;
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.361);
 }
 
