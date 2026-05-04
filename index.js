@@ -3,6 +3,9 @@
 
 const username = window.prompt("What is your name?");
 document.getElementById("Title").textContent = `Welcome ${username}`;
+if(username == "Alex") console.log("username is correct")
+else if(username == "") console.log(`username not written`);
+else console.log(`username is incorrect`);
 
 // temperature conversion js
 function convert()
