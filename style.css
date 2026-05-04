@@ -44,3 +44,17 @@ h1{
     justify-content: center;
     position: relative;
 }
+
+.pgBtns
+{
+    font-size: 1.25em;
+    padding: 5px 10px;
+    border-style:groove;
+    border-color:black;
+    border-radius: 5px;
+    background-color: rgb(241, 215, 142);
+    transition: background-color 0.25s;
+}
+.pgBtns:hover{
+    background-color: rgb(228, 182, 54);
+} 
