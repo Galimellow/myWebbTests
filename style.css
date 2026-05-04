@@ -1,5 +1,15 @@
+body{
+  text-align: center;
+  display: flex;
+}
+p{
+  font-size: 1.5em;  
+}
+#inputText{
+  font-size: 1.5em;
+}
 button{
-  font-size: 2em;
+  font-size: 1.5em;
   border: black solid;
   border-width: 4px;
   border-radius: 8px;
