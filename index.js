@@ -2,7 +2,7 @@
 const username = window.prompt(`Enter username: `);
 if(username == "" || username == null) {username = 'guest';}
 document.getElementById(`Title`).textContent = `Welcome ${username}`;
-console.log("Welcome ${username}");
+console.log(`Welcome ${username}`);
 
 // temperature conversion js
 function convert()
