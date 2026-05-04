@@ -1,11 +1,8 @@
-//let userPasword = window.prompt(`Esti gay!`);
-//if(userPasword != "Gay esti tu!") return;
 
 const username = window.prompt(`Enter username: `);
+if(username == "" || username == null) {username = 'guest';}
 document.getElementById(`Title`).textContent = `Welcome ${username}`;
-if(username == "Alex") console.log("username is correct")
-else if(username == "") console.log(`username not written`);
-else console.log(`username is incorrect`);
+console.log("Welcome ${username}");
 
 // temperature conversion js
 function convert()
