@@ -3,86 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyWebspaceAndTests</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<body id="pg3Background">
-    <h1 class="centered"><span id="Title">Welcome</span></h1>
+<body>
+    <h1>Rock, paper, scisors</h1>
+
+    <div class="choices">
+        <button onclick="game('rock')">✊</button>
+        <button onclick="game('paper')">✋</button>
+        <button onclick="game('scissors')">✌️</button>
+    </div><br>
+    <div class="nowStats" id="userDisplay">Your choice: </div>
+    <div class="nowStats" id="computerDisplay">Computer choice: </div>
+    <div class="nowStats" id="resultDisplay">Game result: </div>
     
-    <div class="row">
-        <form class="box">
-            <h2 id="tempTitle">Temperature converter</h2>
-    
-            <p>Select temperature:</p>
-            <input type="number" id="tempNr" value="0"><br>
-    
-            <input type="radio" id="toFahrenheit" name="unit">
-            <label for="toFahrenheit">Celsius ➡️ Fahrenheit</label><br>
-            
-            <input type="radio" id="toCelsius" name="unit">
-            <label for="toCelsius">Fahrenheit ➡️ celsius</label><br>
-    
-            <button id="tempBtn" type="button" onclick="convert()">Submit</button>
-            <p id="tempResult"></p>
-        </form>
+    <div class="nowStats">Your score: <span id="userScoreDisplay"></span></div>
+    <div class="nowStats">Computer score: <span id="computerScoreDisplay"></span></div>
 
-
-        <form class="box">
-            <h2 class="pswdGenTitle">Password generator</h2>
-
-            <input type="number" id="pswdLeng" value="1" min="1" max="30"><br>
-
-            <input type="checkbox" id="uppercase">
-            <label for="uppercase">Uppercase letters</label><br>
-            
-            <input type="checkbox" id="lowercase">
-            <label for="lowercase">Lowercase letters</label><br>
-
-            <input type="checkbox" id="numbers">
-            <label for="numbers">Numbers</label><br>
-
-            <input type="checkbox" id="punctMark">
-            <label for="punctMark">Symbols</label><br>
-
-            <button id="pswdGenBtn" type="button" onclick="genPswd()">Create</button>
-            <p id="pswdResult"></p>
-        </form>
-
-        <form id="timeBox">
-            <h2 id="timeBoxTitle">Current time</h2>
-
-            <p id="currentTime">00:00:00</p>
-        </form>
-    </div>
-
-    <div class="row">
-        <form id="timerBox">
-            <h2 id="timer">00:00:00:00</h2>
-
-            <div>
-                <button class="timerBtn" id="startTimer" type="button" onclick="startTimr()">Start</button>
-                <button class="timerBtn" id="stopTimer" type="button" onclick="stopTimr()">Stop</button>
-                <button class="timerBtn" id="resetTimer" type="button" onclick="resetTimr()">Reset</button>
-            </div>
-        </form>
-        <form id="alarmBox">
-            <input type="number" id="alarmHour" min="0" value="0">
-            <input type="number" id="alarmMinute" min="0" value="0">
-            <div>
-                    <!-- Rounded switch -->
-                <label class="switch" id="alarmIsOn">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-                <label for="alarmIsOn">Alarm is on</label>
-                <br><br>
-
-                <button class="timerBtn" id="setAlarm" type="button" onclick="stopTimr()">Set Alarm</button>
-                <button class="timerBtn" id="resetAlarm" type="button" onclick="resetTimr()">Reset</button>
-            </div>
-        </form>
-    </div>
-  
     <script src="index.js"></script>
 </body>
 </html>
