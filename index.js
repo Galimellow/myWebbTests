@@ -53,3 +53,38 @@ function game(userChoice){
     userScoreDisplay.textContent =  userScore;
     computerScoreDisplay.textContent = computerScore;
 }
+
+
+const movingBox = document.getElementById("movingBox");
+const moveAmount = 10;
+let x=0, y=0;
+
+document.addEventListener("keydown", event => {
+    if(event.key.startsWith("Arrow"))
+    {
+        event.preventDefault();
+
+        movingBox.textContent = "😆";
+        movingBox.style.backgroundColor = "hsl(120, 48%, 59%)";
+        switch(event.key){
+            case "ArrowUp":
+                y -= moveAmount;
+                break;
+            case "ArrowDown":
+                y += moveAmount;
+                break;
+            case "ArrowLeft":
+                x -= moveAmount;
+                break;
+            case "ArrowRight":
+                x += moveAmount;
+        }
+
+        movingBox.style.top = `${y}px`;
+        movingBox.style.left = `${x}px`;
+    }
+});
+document.addEventListener("keyup", event => {
+    movingBox.textContent = "😊";
+    movingBox.style.backgroundColor = "hsl(120, 85%, 34%)";
+}); 
