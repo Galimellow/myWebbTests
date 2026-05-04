@@ -1,6 +1,25 @@
 //let userPasword = window.prompt(`Esti gay!`);
 //if(userPasword != "Gay esti tu!") return;
 
+const usrAcc = document.getElementById("usrAcc");
+
+let username;
+let calcState = 0;
+
+document.getElementById("myLoginBtn").onclick = function(){
+    username = document.getElementById("myLogin").value;
+    if(Boolean(username) == false) 
+    {
+        usrAcc.textContent = "No username written!";
+        window.alert('No username written');
+    }
+    else{
+        usrAcc.textContent = "Username accepted";
+        document.getElementById("Title").textContent = `Welcome ${username}`;
+        document.getElementById("loginCred").textContent = "";
+    }
+}
+
 // temperature conversion js
 function convert()
 {
