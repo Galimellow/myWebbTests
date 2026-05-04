@@ -25,7 +25,7 @@ async function fetchData(){
 
         imgElement.src = pokemonSprite;
         imgElement.style.display = "block";
-        imgElement.style.width = "20%";
+        imgElement.style.width = "25%";
         let x = JSON.stringify(data.name).replaceAll('"', '');
         document.getElementById("allData").textContent = x;
     }
