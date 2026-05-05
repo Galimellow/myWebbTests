@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock, paper, scissors free game</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Rock, paper, scissors</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Rock, paper, scissors</h1>
+    <h1>Rock, paper, scisors</h1>
 
     <div class="choices">
         <button onclick="game('rock')">✊</button>
@@ -22,6 +22,13 @@
     <div class="nowStats">Computer score: <span id="computerScoreDisplay"></span></div>
 
     <div id="movingBox">😊</div>
+
+    <div class="movementArrow">
+        <button id="up" onclick="move('u')">⬆️</button>
+        <button id="down" onclick="move('d')">⬇️</button>
+        <button id="left" onclick="move('l')">⬅️</button>
+        <button id="right" onclick="move('r')">➡️</button>
+    </div>
     <br><br>
     
     <a href="pokemonAPI.html" class="centered"><span class="pgBtns">to pokemon</span></a>
