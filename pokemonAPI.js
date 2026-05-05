@@ -28,9 +28,10 @@ async function fetchData(){
         imgElement.style.width = "25%";
         
         let pokemonId = JSON.stringify(data.types[0].type.name).replaceAll('"', '');
-        console.log(pokemonId);
+        document.getElementById("allData").textContent = pokemonId;
     }
     catch(error){
         console.log(error);
+        document.getElementById("allData").textContent = error;
     }
 }
