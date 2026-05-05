@@ -26,9 +26,14 @@ async function fetchData(){
         imgElement.src = pokemonSprite;
         imgElement.style.display = "block";
         imgElement.style.width = "25%";
-        
-        let pokemonId = JSON.stringify(data.types[0].type.name).replaceAll('"', '');
-        document.getElementById("allData").textContent = pokemonId;
+
+        let theTypes = "";
+        for(let i=0; i<data.types.length; i++){
+            let pokemonId = JSON.stringify(data.types[i].type.name).replaceAll('"', '');
+            theTypes += pokemonId;
+            if(i!=data.types.length-1) theTypes += ", ";
+        }
+        document.getElementById("allData").textContent = theTypes;
     }
     catch(error){
         console.log(error);
