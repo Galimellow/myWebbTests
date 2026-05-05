@@ -13,7 +13,7 @@ async function fetchData(){
     const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
 
     try{
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
         
         if(!response.ok){
             throw new Error("Could not fetch data");
@@ -26,8 +26,9 @@ async function fetchData(){
         imgElement.src = pokemonSprite;
         imgElement.style.display = "block";
         imgElement.style.width = "25%";
-        let x = JSON.stringify(data.name).replaceAll('"', '');
-        document.getElementById("allData").textContent = x;
+        
+        let pokemonId = JSON.stringify(data.types[0].type.name).replaceAll('"', '');
+        console.log(pokemonId);
     }
     catch(error){
         console.log(error);
