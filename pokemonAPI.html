@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon image retriever</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="pokemonAPI.css">
 </head>
 <body>
-    <input type="text" id="pokemonName" placeholder="Enter Pokemon name">
-    <button onclick="fetchData()">Fetch Pokemon</button><br>
+    <div class="row" id="pokemonTracer">
+        <div id="pokemonList">
+            <button id="pokemonListButton">List Of Pokemon</button>
+            <div id="listOfPokemon" style = "display: none">AA</div>
+        </div>
+        <div id="actualTracer">
+            <input type="text" id="pokemonName" placeholder="Enter Pokemon Name">
+            <button onclick="fetchData()">Fetch Pokemon</button><br>
 
-    <img src="" alt="Pokemon Image" id="pokemonImg" style="display: none"><br>
-    
-    <p id="allData"></p><br>
+            <img src="" alt="Pokemon Image" id="pokemonImg"  style="display: none"><br>
+            
+            <p id="allData"></p><br>
+        </div>
+    </div>    
     
     <a href="index.html" class="centered"><span class="pgBtns">to page 1</span></a>
     <script src="pokemonAPI.js"></script>
