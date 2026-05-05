@@ -59,6 +59,27 @@ const movingBox = document.getElementById("movingBox");
 const moveAmount = 10;
 let x=0, y=0;
 
+function move(direction){
+    event.preventDefault();
+    
+    switch(direction){
+        case `u`: 
+            y -= moveAmount;
+            break;
+        case `d`: 
+            y += moveAmount;
+            break;
+        case `l`: 
+            x -= moveAmount;
+            break;
+        case `r`: 
+            x += moveAmount;
+            break;
+    }
+    
+    movingBox.style.top = `${y}px`;
+    movingBox.style.left = `${x}px`;
+}
 document.addEventListener("keydown", event => {
     if(event.key.startsWith("Arrow"))
     {
