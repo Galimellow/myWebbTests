@@ -1,4 +1,4 @@
-fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+/*fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
     .then(response => {
         if(!response.ok){
             throw new Error("Could not fetch data");
@@ -6,7 +6,7 @@ fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
         return response.json()
     })
     .then(data => console.log(data.name))
-    .catch(error => console.log(error));
+    .catch(error => console.log(error));*/
 
 async function fetchData(){
 
@@ -30,7 +30,7 @@ async function fetchData(){
         let theTypes = "";
         for(let i=0; i<data.types.length; i++){
             let pokemonId = JSON.stringify(data.types[i].type.name).replaceAll('"', '');
-            theTypes += pokemonId;
+            theTypes += pokemonId.trim().charAt(0).toUpperCase() + pokemonId.trim().slice(1).toLowerCase();;
             if(i!=data.types.length-1) theTypes += ", ";
         }
         document.getElementById("allData").textContent = theTypes;
@@ -51,9 +51,12 @@ pokemonListButton.addEventListener("click", event => {
     else listOfPokemon.style.display = "none";
 })
 
-let arrayNames = [];
 async function fetchNames(){
     try{
+        const orderedList = document.createElement("ol");
+        document.getElementById("listOfPokemon").append(orderedList);
+        orderedList.id = "listOfPokemonDisplay";
+        orderedList.style.height = "200px";
         for(let i=1; i<=1025; i++)
         {
             const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
@@ -61,19 +64,13 @@ async function fetchNames(){
                 throw new Error("Could not fetch data");
             }
             const data = await response.json();
-            arrayNames.push(data.name);
-            const newListItem = document.createElement("h2");
-            newListItem.textContent = data.name;
-            document.getElementById("listOfPokemon").append(newListItem);
-            /*
-            theNames1 += "{";
-            theNames1 += `"name" : "${data.name}",`;
-            theNames1 += `"id" : "${i}"`;
-            theNames1 += "}";
-            if(i<151) theNames1 += ",";*/
+            const name = data.name.trim().charAt(0).toUpperCase() + data.name.trim().slice(1).toLowerCase();
+            
+            const newListItem = document.createElement("li");
+            newListItem.textContent = name;
+            document.getElementById("listOfPokemonDisplay").append(newListItem);
         }
         //const namesData = JSON.parse(theNames1);
-        console.log(arrayNames);
     }
     catch(error){
         console.log(error);
