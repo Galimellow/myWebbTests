@@ -9,8 +9,10 @@
 <body>
     <div class="row" id="pokemonTracer">
         <div id="pokemonList">
-            <button id="pokemonListButton">List Of Pokemon</button>
-            <div id="listOfPokemon" style = "display: none">AA</div>
+            <span id="pokemonListButton">List Of Pokemon</span>
+            <div id="listOfPokemon" style = "display: none">
+
+            </div>
         </div>
         <div id="actualTracer">
             <input type="text" id="pokemonName" placeholder="Enter Pokemon Name">
@@ -22,7 +24,11 @@
         </div>
     </div>    
     
-    <a href="index.html" class="centered"><span class="pgBtns">to page 1</span></a>
+    <div id="pageNav">
+        <a href="index.html" class="centered"><span class="pgBtns">PAGE 1</span></a>
+        <a href="pokemonAPI.html" class="centered"><span class="pgBtns">POKEMON PAGE</span></a>
+    </div>
+    
     <script src="pokemonAPI.js"></script>
 </body>
 </html>
