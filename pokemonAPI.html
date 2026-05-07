@@ -10,12 +10,16 @@
     <div class="row" id="pokemonTracer">
         <div id="pokemonList">
             <span id="pokemonListButton">List Of Pokemon</span>
-            <div id="listOfPokemon" style = "display: none">
-
-            </div>
+            <div id="listOfPokemon" style = "display: none"></div>
         </div>
         <div id="actualTracer">
-            <input type="text" id="pokemonName" placeholder="Enter Pokemon Name">
+            <div>
+                <input type="text" id="pokemonName" placeholder="Enter Pokemon Name">
+                <div id="pokemonThatStart">        
+                    <span id="pokemonThatStartButton">List Of Pokemon</span>
+                    <div id="pokemonThatStartShow" style = "display: none"></div>
+                </div>
+            </div>
             <button onclick="fetchData()">Fetch Pokemon</button><br>
 
             <img src="" alt="Pokemon Image" id="pokemonImg"  style="display: none"><br>
