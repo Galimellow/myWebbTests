@@ -90,20 +90,19 @@ pokemonThatStartButton.addEventListener("click", event => {
     {
         pokemonThatStartShow.style.display = "block";
         const orderedNameList = document.createElement("ol");
-        document.getElementById("pokemonThatStartShow").append(orderedNameList);
+        pokemonThatStartShow.append(orderedNameList);
         orderedNameList.id = "listOfPokemonStart";
         orderedNameList.style.height = "200px";
         orderedNameList.style.overflow = "scroll";
         orderedNameList.style.overflowX = "hidden";
         
-        const traceName = document.getElementById("pokemonName").textContent;
+        const traceName = document.getElementById("pokemonName").value;
         console.log(`Searching for ${traceName}`);
         
         for(let i=1; i<=1025; i++)
         {
-            console.log(traceName);
             const newListItem = document.createElement("li");
-            let currName;
+            let currName = "";
 
             for(let j=0; j<traceName.length; j++) currName += namesArray[i].charAt(j);
             if(i<=10) console.log(`Current indexed pokemon ${currName}`);
