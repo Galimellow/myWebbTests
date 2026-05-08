@@ -105,7 +105,7 @@ pokemonThatStartButton.addEventListener("click", event => {
             const newListItem = document.createElement("li");
             let currName;
 
-            for(int j=0; j<traceName.length; j++) currName += namesArray[i].charAt(j);
+            for(let j=0; j<traceName.length; j++) currName += namesArray[i].charAt(j);
             if(i<=10) console.log(`Current indexed pokemon ${currName}`);
 
             if(currName === traceName) {
