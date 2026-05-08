@@ -95,13 +95,23 @@ pokemonThatStartButton.addEventListener("click", event => {
         orderedNameList.style.height = "200px";
         orderedNameList.style.overflow = "scroll";
         orderedNameList.style.overflowX = "hidden";
+        
+        const traceName = document.getElementById("pokemonName").textContent;
+        console.log(`Searching for ${traceName}`);
+        
         for(let i=1; i<=1025; i++)
         {
-            const traceName = document.getElementById("pokemonName").textContent;
             console.log(traceName);
             const newListItem = document.createElement("li");
-            newListItem.textContent = namesArray[i];
-            document.getElementById("listOfPokemonStart").append(newListItem);
+            let currName;
+
+            for(int j=0; j<traceName.length; j++) currName += namesArray[i].charAt(j);
+            if(i<=10) console.log(`Current indexed pokemon ${currName}`);
+
+            if(currName === traceName) {
+                newListItem.textContent = namesArray[i];
+                document.getElementById("listOfPokemonStart").append(newListItem);
+            }
         }
     }
     else{
@@ -109,19 +119,3 @@ pokemonThatStartButton.addEventListener("click", event => {
         document.getElementById("listOfPokemonStart").remove();
     }
 })
-/*
-function fetchNamesStart(){
-    //if(namesArray.length<2025) return;
-    
-    const orderedNameList = document.createElement("ol");
-    document.getElementById("pokemonThatStartShow").append(orderedNameList);
-    orderedNameList.id = "listOfPokemonStart";
-    orderedNameList.style.height = "200px";
-    for(let i=1; i<=1025; i++)
-    {
-        const newListItem = document.createElement("li");
-        newListItem.textContent = name;
-        document.getElementById("listOfPokemonDisplay").append(newListItem);
-    }
-}
-*/
