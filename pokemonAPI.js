@@ -54,6 +54,7 @@ pokemonListButton.addEventListener("click", event => {
 let namesArray = [];
 async function fetchNames(){
     try{
+        namesArray.push("Next indexes are pokemon");
         const orderedNameList = document.createElement("ol");
         document.getElementById("listOfPokemon").append(orderedNameList);
         orderedNameList.id = "listOfPokemonDisplay";
@@ -107,7 +108,7 @@ pokemonThatStartButton.addEventListener("click", event => {
             return;
         }
         
-        for(let i=0; i<1025; i++)
+        for(let i=1; i<=1025; i++)
         {
             const newListItem = document.createElement("li");
             let currName = "";
