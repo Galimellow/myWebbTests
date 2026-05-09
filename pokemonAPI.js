@@ -98,6 +98,14 @@ pokemonThatStartButton.addEventListener("click", event => {
         
         const traceName = document.getElementById("pokemonName").value.toLowerCase();
         //console.log(`Searching for ${traceName}`);
+        if(traceName.length>20) {
+            document.getElementById("listOfPokemonStart").append("Name too long, pokemon doesn't exist");
+            return;
+        }
+        else if(traceName.length==0) {
+            document.getElementById("listOfPokemonStart").append("Enter a pokemon");
+            return;
+        }
         
         for(let i=0; i<1025; i++)
         {
