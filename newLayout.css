@@ -60,8 +60,7 @@
 .blackBox{
     text-decoration: none;
     width: 100%;
-    min-height: 950px;
-    height: 80%;
+    height: 950px;
     background-color: hsl(0, 0%, 0%, 100%); /* Black */
     overflow-x: hidden; /* Disable horizontal scroll */
 
@@ -79,6 +78,8 @@
     margin-bottom: 3%;
     width: 76%;
     box-shadow: 5px 10px 10px rgba(255, 255, 255, 0.571);
+    overflow: scroll;
+    overflow-x: hidden;
 }
 .slideNavBox{
     font-family: sans-serif;
