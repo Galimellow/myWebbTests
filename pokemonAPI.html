@@ -3,39 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokemon image retriever</title>
+    <title>New page Layout</title>
+    <link rel="stylesheet" href="newLayout.css">
     <link rel="stylesheet" href="pokemonAPI.css">
 </head>
 <body>
-    <div class="row" id="pokemonTracer">
-        <div id="pokemonList">
-            <span id="pokemonListButton">List Of Pokemon</span>
-            <div id="listOfPokemon" style = "display: none"></div>
-        </div>
-        <div id="actualTracer">
-            <div>
-                <input type="text" id="pokemonName" placeholder="Enter Pokemon Name">
-                <div id="pokemonThatStart">        
-                    <div id="pokemonThatStartButton">
-                        <span>List of Pokemon with these letters</span>
-                    </div>
-                    <div id="pokemonThatStartShow" style = "display: none"></div>
+    <section class="navMenu">
+        <nav class="pageNav">
+            <ul>
+                <li><a href="rps.html">ROCK PAPER SCISORS</a></li>
+                <li><a href="pokemonAPI.html">POKEMON TRACKER</a></li>
+                <li><a href="newLayout.html">NEW LAYOUT</a></li>
+                <li><a href="index.html">HOME</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section class="mainTitle">
+        <h1>Simple Pokemon Tracker</h1>
+        <p id="pageIndex" style="display: none">1</p>
+    </section>
+    <section class="blackBox">
+        <div class="contentBox">   
+            <div class="row" id="pokemonTracer">
+                <div id="pokemonList">
+                    <span id="pokemonListButton">List Of Pokemon</span>
+                    <div id="listOfPokemon" style = "display: none"></div>
                 </div>
-            </div>
-            <button onclick="fetchData()">Fetch Pokemon</button><br>
+                <div id="actualTracer">
+                    <div>
+                        <input type="text" id="pokemonName" placeholder="Enter Pokemon Name">
+                        <div id="pokemonThatStart">        
+                            <div id="pokemonThatStartButton">
+                                <a>List of Pokemon with these letters</a>
+                            </div>
+                            <div id="pokemonThatStartShow" style = "display: none"></div>
+                        </div>
+                    </div>
+                    <button onclick="fetchData()">Fetch Pokemon</button><br>
 
-            <img src="" alt="Pokemon Image" id="pokemonImg"  style="display: none"><br>
-            
-            <p id="allData"></p><br>
+                    <img src="" alt="Pokemon Image" id="pokemonImg"  style="display: none"><br>
+                    
+                    <p id="allData"></p><br>
+                </div>
+            </div>    
         </div>
-    </div>    
-    
-    <div id="pageNav">
-        <a href="index.html" class="centered"><span class="pgBtns">PAGE 1</span></a>
-        <a href="pokemonAPI.html" class="centered"><span class="pgBtns">POKEMON PAGE</span></a>
-        <a href="newLayout.html" class="centered"><span class="pgBtns">BLAH</span></a>
-    </div>
-    
+        <div class="slideNavBox">
+            <h2>Slides</h2><br>
+            <h2>💠💠</h2>
+            <br>
+            <nav>
+                <ul>
+                    <li id="slide1"><a href="newLayout.html">Slide 1</a></li>
+                    <li id="slide2"><a href="newLayout2.html">Slide 2</a></li>
+                    <li id="slide3"><a href="newLayout3.html">Slide 3</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <div class="pageNavBorderLeft"></div>
+
+    <!--
+    <div class="pageNavBorderRight"></div>
+    -->
+
+    <script src="newLayout.js"></script>
     <script src="pokemonAPI.js"></script>
 </body>
 </html>
